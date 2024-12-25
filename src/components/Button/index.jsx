@@ -1,0 +1,85 @@
+import className from 'classnames/bind';
+import style from './Button.module.css';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+let cx = className.bind(style);
+
+function Button({
+    to,
+    href,
+    primary = false,
+    outline = false,
+    small = false,
+    large = false,
+    rounded = false,
+    text = false,
+    disable = false,
+    leftIcon,
+    rightIcon,
+    className,
+    clsTitle,
+    children,
+    onClick,
+    preProps,
+}) {
+    let Comp = 'button';
+    const props = {
+        onClick,
+        ...preProps,
+    };
+    if (disable) {
+        Object.keys(props).forEach((key) => {
+            if (key.startsWith('on')) {
+                delete props.key;
+            }
+        });
+    }
+    if (to) {
+        props.to = to;
+        Comp = Link;
+    } else if (href) {
+        props.href = href;
+        Comp = 'a';
+    }
+
+    let classes = cx('wrapper', {
+        [className]: className,
+        primary,
+        outline,
+        small,
+        large,
+        rounded,
+        text,
+        disable,
+    });
+    let classTitle = cx('title', {
+        [clsTitle]: clsTitle,
+    });
+    return (
+        <Comp className={classes} {...props}>
+            {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
+            <span className={classTitle}>{children}</span>
+            {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
+        </Comp>
+    );
+}
+
+Button.propTypes = {
+    to: PropTypes.string,
+    href: PropTypes.string,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    small: PropTypes.bool,
+    large: PropTypes.bool,
+    rounded: PropTypes.bool,
+    text: PropTypes.bool,
+    disable: PropTypes.bool,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.node,
+    className: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    onClick: PropTypes.func,
+    preProps: PropTypes.string,
+};
+
+export default Button;

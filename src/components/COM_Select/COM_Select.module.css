@@ -1,0 +1,36 @@
+.wrapper-select {
+    font-size: 2.4rem;
+}
+[class*='box'] {
+}
+.wrapper-select [class*='__control'] {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 2px solid var(--while) !important;
+    color: var(--while) !important;
+    min-width: 200px;
+}
+.wrapper-select [class*='__option'] {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    cursor: pointer;
+    color: var(--while) !important;
+}
+.wrapper-select [class*='__option']:hover {
+    text-decoration: underline;
+}
+
+.wrapper-select [class*='__menu'] {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.wrapper-select [class*='__indicator-separator'] {
+    display: none;
+}
+.wrapper-select [class*='__single-value'] {
+    color: var(--while);
+}
+.wrapper-select [class*='__placeholder'] {
+    color: var(--while);
+}
+.wrapper-select [class*='__dropdown-indicator'][class*='__indicator'] {
+    color: var(--while);
+}
