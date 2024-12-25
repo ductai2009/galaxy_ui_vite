@@ -100,3 +100,8 @@
 
     /* background-color: rosybrown; */
 }
+@media screen and (max-width: 1024px) {
+    .section .section-title {
+        font-size: 2.6vw;
+    }
+}

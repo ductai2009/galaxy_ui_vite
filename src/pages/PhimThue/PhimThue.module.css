@@ -54,3 +54,11 @@
     font-weight: 600;
 }
 /* END select search */
+@media screen and (max-width: 1024px) {
+    .slide-wrapper {
+        height: unset;
+    }
+    .section .section-title {
+        font-size: 2.6vw;
+    }
+}

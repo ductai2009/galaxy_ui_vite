@@ -1,5 +1,5 @@
 .wrapper-select {
-    font-size: 2.4rem;
+    font-size: 1.4vw;
 }
 [class*='box'] {
 }
@@ -33,4 +33,9 @@
 }
 .wrapper-select [class*='__dropdown-indicator'][class*='__indicator'] {
     color: var(--while);
+}
+@media screen and (max-width: 1024px) {
+    .section .section-title {
+        font-size: 2.6vw;
+    }
 }

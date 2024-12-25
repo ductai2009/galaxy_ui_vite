@@ -7,7 +7,7 @@ function Header({ title, onBack }) {
     return (
         <div className={cx('header-menu')}>
             <button onClick={onBack} className={cx('iconBack-menu')}>
-                <PrevIcon />
+                <PrevIcon width="2rem" height="2rem" />
             </button>
             <div className={cx('title-menu')}>{title}</div>
         </div>

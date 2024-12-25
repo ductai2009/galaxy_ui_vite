@@ -193,7 +193,7 @@
     z-index: 1;
     transform: translateY(-50%);
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.6vw;
     cursor: pointer;
     padding: 12px 0;
 }
@@ -203,7 +203,7 @@
     left: 10px;
     z-index: 1;
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: 1.6vw;
     color: #fff;
     cursor: pointer;
     padding: 12px 0;

@@ -4,7 +4,15 @@ import images from '../../../assets/image';
 import Button from '../../../components/Button';
 import config from '../../../components/config';
 import { Link, NavLink } from 'react-router-dom';
-import { SearchIcon, LogOutIcon, LanguageIcon, FeedBackIcon, AccountIcon, SettingIcon } from '../../../components/Icon';
+import {
+    SearchIcon,
+    LogOutIcon,
+    LanguageIcon,
+    FeedBackIcon,
+    AccountIcon,
+    SettingIcon,
+    MoreNavIcon,
+} from '../../../components/Icon';
 import Search from '../../../components/Search';
 
 import Image from '../../../components/Image';
@@ -32,6 +40,7 @@ function Header() {
             to: '',
         },
     ];
+
     const MENU_ACC = [
         {
             title: 'Tài khoản',
@@ -58,55 +67,98 @@ function Header() {
             },
         ];
     }
+    const MENU_NAV = [
+        {
+            title: 'Trang Chủ',
+            icon: '',
+            to: config.routes.Home,
+        },
+        {
+            title: 'Kho Phim',
+            icon: '',
+            to: config.routes.WareHouse,
+        },
+        {
+            title: 'Phim Điện Ảnh',
+            icon: '',
+            to: config.routes.PhimDienAnh,
+        },
+        {
+            title: 'Phim Bộ',
+            icon: '',
+            to: config.routes.PhimBo,
+        },
+        {
+            title: 'Phim Thuê',
+            icon: '',
+            to: config.routes.PhimThue,
+        },
+    ];
     return (
         <div className={cx('wrapper')}>
             <div className={cx('content')}>
                 <div className={cx('nav')}>
-                    <Link to={config.routes.Home}>
-                        <div className={cx('logo')}>
+                    <div className={cx('logo')}>
+                        <Link to={config.routes.Home} className={cx('logo-img')}>
                             <img src={images.logo} alt="logo"></img>
-                        </div>
-                    </Link>
+                        </Link>
+                    </div>
                     <div className={cx('item-nav')}>
-                        <NavLink end className={(nav) => cx('nav', { active: nav.isActive })} to={config.routes.Home}>
-                            <div className={cx('item')}>Trang chủ</div>
-                        </NavLink>
-                        <NavLink
-                            end
-                            className={(nav) => cx('nav', { active: nav.isActive })}
-                            to={config.routes.WareHouse}
-                        >
-                            <div className={cx('item')}>Kho Phim</div>
-                        </NavLink>
-                        <NavLink
-                            end
-                            className={(nav) => cx('nav', { active: nav.isActive })}
-                            to={config.routes.PhimDienAnh}
-                        >
-                            <div className={cx('item')}>Phim Điện Ảnh</div>
-                        </NavLink>
-                        <NavLink end className={(nav) => cx('nav', { active: nav.isActive })} to={config.routes.PhimBo}>
-                            <div className={cx('item')}>Phim Bộ</div>
-                        </NavLink>
-                        <NavLink
-                            end
-                            className={(nav) => cx('nav', { active: nav.isActive })}
-                            to={config.routes.PhimThue}
-                        >
-                            <div className={cx('item')}>Phim Thuê</div>
-                        </NavLink>
-                        {/* <NavLink end className={(nav) => cx('nav', { active: nav.isActive })} to={'/khuyen-mai'}>
-                            <div className={cx('item')}>Khuyến Mãi</div>
-                        </NavLink> */}
-                        {/* <NavLink end className={(nav) => cx('nav', { active: nav.isActive })} to={config.routes.Blog}>
-                            <div className={cx('item')}>Blog</div>
-                        </NavLink>
-                        <NavLink end className={(nav) => cx('nav', { active: nav.isActive })} to={config.routes.Help}>
-                            <div className={cx('item')}>Hỗ Trợ</div>
-                        </NavLink> */}
-                        {/* <NavLink end className={(nav) => cx('nav', { active: nav.isActive })} to={config.routes.Player}>
-                            <div className={cx('item')}>Player</div>
-                        </NavLink> */}
+                        <Menu item={MENU_NAV}>
+                            <div className={cx('nav-icon-more')}>
+                                <MoreNavIcon className={cx('icon-more')} />
+                            </div>
+                        </Menu>
+
+                        <div className={cx('nav-list')}>
+                            <NavLink
+                                end
+                                className={(nav) => cx('nav', { active: nav.isActive })}
+                                to={config.routes.Home}
+                            >
+                                <div className={cx('item')}>Trang chủ</div>
+                            </NavLink>
+                            <NavLink
+                                end
+                                className={(nav) => cx('nav', { active: nav.isActive })}
+                                to={config.routes.WareHouse}
+                            >
+                                <div className={cx('item')}>Kho Phim</div>
+                            </NavLink>
+                            <NavLink
+                                end
+                                className={(nav) => cx('nav', { active: nav.isActive })}
+                                to={config.routes.PhimDienAnh}
+                            >
+                                <div className={cx('item')}>Phim Điện Ảnh</div>
+                            </NavLink>
+                            <NavLink
+                                end
+                                className={(nav) => cx('nav', { active: nav.isActive })}
+                                to={config.routes.PhimBo}
+                            >
+                                <div className={cx('item')}>Phim Bộ</div>
+                            </NavLink>
+                            <NavLink
+                                end
+                                className={(nav) => cx('nav', { active: nav.isActive })}
+                                to={config.routes.PhimThue}
+                            >
+                                <div className={cx('item')}>Phim Thuê</div>
+                            </NavLink>
+                            {/* <NavLink end className={(nav) => cx('nav', { active: nav.isActive })} to={'/khuyen-mai'}>
+                                <div className={cx('item')}>Khuyến Mãi</div>
+                            </NavLink> */}
+                            {/* <NavLink end className={(nav) => cx('nav', { active: nav.isActive })} to={config.routes.Blog}>
+                                <div className={cx('item')}>Blog</div>
+                            </NavLink>
+                            <NavLink end className={(nav) => cx('nav', { active: nav.isActive })} to={config.routes.Help}>
+                                <div className={cx('item')}>Hỗ Trợ</div>
+                            </NavLink> */}
+                            {/* <NavLink end className={(nav) => cx('nav', { active: nav.isActive })} to={config.routes.Player}>
+                                <div className={cx('item')}>Player</div>
+                            </NavLink> */}
+                        </div>
                     </div>
                 </div>
 

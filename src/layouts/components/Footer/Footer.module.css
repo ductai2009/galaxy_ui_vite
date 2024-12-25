@@ -25,12 +25,14 @@
 .footer .wrapper_content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .footer .footer-content {
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 25%;
+    min-width: 330px;
 }
 .footer .img-logo {
     width: 150px;

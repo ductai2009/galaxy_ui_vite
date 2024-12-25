@@ -47,7 +47,7 @@
 }
 .wrapper .btn-register {
     background-color: var(--while);
-    font-size: 3rem;
+    font-size: 1.6vw;
     color: aqua;
     padding: 6px 40px;
     font-weight: 700;
@@ -61,7 +61,7 @@
 }
 
 .wrapper .decs {
-    font: 1.8rem;
+    font-size: 1.6vw;
     margin-top: 12px;
     color: var(--while);
     font-weight: 600;
@@ -74,7 +74,7 @@
 }
 
 .wrapper .content-slide .name {
-    font-size: 8rem;
+    font-size: 3.6vw;
     font-weight: 600;
     opacity: 0;
     color: antiquewhite;
@@ -131,12 +131,11 @@
 .next {
     position: absolute;
     top: 50%;
-
     right: 10px;
     z-index: 1;
     transform: translateY(-100%);
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.6vw;
     cursor: pointer;
 }
 .prev {
@@ -145,7 +144,7 @@
     left: 10px;
     z-index: 1;
     transform: translateY(-100%);
-    font-size: 2rem;
+    font-size: 1.6vw;
     color: #fff;
     cursor: pointer;
 }
@@ -153,14 +152,17 @@
 .pagination.pagination-wareHouse {
     justify-content: end;
     align-items: end;
-    padding-right: 12%;
+    padding-right: 15%;
 }
 
 .prev.prev-wareHouse {
     bottom: 10%;
     top: unset;
     right: 8%;
+    right: calc(5% + 50px);
     left: unset;
+
+    /* background-color: aqua; */
     transform: translateY(50%);
 }
 .next.next-wareHouse {
@@ -171,3 +173,24 @@
 }
 
 /* END wareHouse  */
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        height: unset;
+    }
+    .slide-home {
+        height: unset;
+    }
+    .pagination.pagination-wareHouse {
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+        /* background-color: rosybrown; */
+    }
+
+    .prev.prev-wareHouse {
+        display: none;
+    }
+    .next.next-wareHouse {
+        display: none;
+    }
+}

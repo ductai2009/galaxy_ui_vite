@@ -136,10 +136,7 @@
     color: rgba(22, 24, 35, 0.5);
 }
 @media screen and (max-width: 1024px) {
-    .search {
-        width: var(--width-search-ipad);
-    }
-    .tooltipBox {
-        width: var(--width-search-ipad);
+    .search.active {
+        /* width: 100%; */
     }
 }

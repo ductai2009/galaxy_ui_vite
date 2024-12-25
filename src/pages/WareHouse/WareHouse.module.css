@@ -40,3 +40,12 @@
     height: 500px;
     width: 100vw;
 }
+
+@media screen and (max-width: 1024px) {
+    .slide-wrapper {
+        height: unset;
+    }
+    .section .section-title {
+        font-size: 2.6vw;
+    }
+}
