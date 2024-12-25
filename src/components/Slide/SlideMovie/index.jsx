@@ -68,7 +68,7 @@ function SlideMovie({ dsImg, urlImg, classPagination, classPrev, classNext, Prop
                             </div>
 
                             <Link
-                                to={config.routes.Player + '/' + item.slug}
+                                to={config.routes.InfoMovie + '/' + item.slug}
                                 state={{
                                     // source: dsImg.name,
                                     name: item.name,

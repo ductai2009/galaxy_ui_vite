@@ -105,7 +105,7 @@ function Countries() {
                             {row.map((item, index) => (
                                 <Link
                                     key={item._id}
-                                    to={config.routes.Player + '/' + item._id}
+                                    to={config.routes.InfoMovie + '/' + item._id}
                                     className={cx('item-img', 'hv-scale')}
                                     state={{
                                         name: item.name,

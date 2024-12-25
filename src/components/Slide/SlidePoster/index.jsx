@@ -68,7 +68,7 @@ function SlidePoster({ dsImg, urlImg, classPagination, classPrev, classNext, Pro
                             </div>
 
                             <Link
-                                to={config.routes.Player + '/' + item.slug}
+                                to={config.routes.InfoMovie + '/' + item.slug}
                                 state={{
                                     // source: dsImg.name,
                                     name: item.name,

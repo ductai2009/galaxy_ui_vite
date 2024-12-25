@@ -14,6 +14,7 @@ function Button({
     rounded = false,
     text = false,
     disable = false,
+    state,
     leftIcon,
     rightIcon,
     className,
@@ -36,6 +37,7 @@ function Button({
     }
     if (to) {
         props.to = to;
+        props.state = state;
         Comp = Link;
     } else if (href) {
         props.href = href;

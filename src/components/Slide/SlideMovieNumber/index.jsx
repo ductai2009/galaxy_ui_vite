@@ -63,7 +63,7 @@ function SlideMovieNumber({
                             <div className={cx('bg-img', 'num' + (index + 1))}></div>
                             <div className={cx('box-content')}>
                                 <Link
-                                    to={config.routes.Player + '/' + item.slug}
+                                    to={config.routes.InfoMovie + '/' + item.slug}
                                     state={{
                                         // source: dsImg.name,
                                         name: item.name,

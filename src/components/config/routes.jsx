@@ -5,6 +5,8 @@ const routes = {
     Movie: '/browse/movie',
     Player: '/player',
     PlayerUrl: '/player/*',
+    InfoMovie: '/info/movie',
+    InfoMovieUrl: '/info/movie/*',
     PhimDienAnh: '/browse/movie',
     PhimDienAnhSearch: '/browse/movie/search',
     PhimBo: '/browse/tvseries',

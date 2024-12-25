@@ -29,7 +29,7 @@
 }
 
 .loading {
-    position: fixed;
+    position: absolute;
     color: var(--while);
     background-color: transparent;
     display: flex;

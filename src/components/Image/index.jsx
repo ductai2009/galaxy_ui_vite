@@ -9,27 +9,18 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 function Image({ fallBack: srcFallBack, to, alt, src, ...props }) {
     const timestamp = new Date().getTime();
     const navigate = useNavigate();
-    const [fallBack, setFallBack] = useState(src);
-    // const [fallBack, setFallBack] = useState(src + `?t=${timestamp}`);
+    const [fallBack, setFallBack] = useState(src ? `${src}?t=${new Date().getTime()}` : images.noImage);
 
     useEffect(() => {
-        try {
-            if (!fallBack) {
-                setFallBack(images.noImage);
-            }
-        } catch (error) {
-            console.log('error load img: ', error);
+        if (src) {
+            setFallBack(`${src}?t=${new Date().getTime()}`);
+        } else {
+            setFallBack(images.noImage);
         }
     }, [src]);
 
     const handleError = () => {
-        if (srcFallBack) {
-            // setFallBack(srcFallBack + `?t=${timestamp}`);
-            setFallBack(srcFallBack);
-        } else {
-            setFallBack(images.noImage);
-            console.log('NoImage: ', fallBack);
-        }
+        setFallBack(srcFallBack || images.noImage);
     };
 
     return (
@@ -39,9 +30,9 @@ function Image({ fallBack: srcFallBack, to, alt, src, ...props }) {
                 style: { transitionDelay: '1s' },
             }}
             className={style.wrapper}
-            src={fallBack}
+            src={src}
             {...props}
-            onError={() => handleError()}
+            onError={(e) => handleError(e)}
             loading="lazy"
             // placeholderSrc={images.noImage}
 
