@@ -79,6 +79,7 @@ function Slide({ urlImg, dsImg, classPagination, classPrev, classNext, PropPrevI
                             <div className={cx('loading')}>
                                 <ClipLoader size={50} color="white" loading={true} className={cx('icon-loading')} />
                             </div>
+                            <div className={cx('bg')}></div>
                             <div className={cx('content-slide')}>
                                 <div
                                     className={cx('name', 'content-1', {
