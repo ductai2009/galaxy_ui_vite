@@ -103,6 +103,7 @@ function Home() {
                     {dsImg.slice(0, 6).map((data, index) => {
                         return (
                             <div className={cx('slide-img')} key={data._id}>
+                                <div className={cx('bg', 'background-hv')}></div>
                                 <Image
                                     className={cx('img', { index: [1, 4].includes(index) })}
                                     src={urlImg + data.thumb_url}
