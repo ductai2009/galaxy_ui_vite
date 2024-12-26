@@ -7,6 +7,7 @@ export default defineConfig({
     build: {
         outDir: '/src', // Thư mục xuất đầu ra
     },
+    base: '/',
     css: {
         modules: {
             generateScopedName: '[name]_[local]', // Tên file + Tên class
