@@ -4,8 +4,9 @@ import react from '@vitejs/plugin-react';
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [react()],
+
     build: {
-        outDir: '/src', // Thư mục xuất đầu ra
+        outDir: 'dist', // Đảm bảo thư mục đầu ra là `dist`
     },
     base: '/',
     css: {
