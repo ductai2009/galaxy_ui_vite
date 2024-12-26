@@ -173,7 +173,7 @@ function Home() {
 
             <div className={cx('section', 'section-4')}>
                 <div className={cx('section-left')}>
-                    <div className={cx('section-right-title', 'section-title')}>
+                    <div className={cx('section-right-title', 'section-title', 'margin-bottom-mobile')}>
                         Nội dung đặc sắc, trải nghiệm mượt mà trên thiết bị di động
                     </div>
                     <div className={cx('section-desc')}>

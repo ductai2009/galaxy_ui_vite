@@ -42,6 +42,9 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .section {
+        padding-bottom: 0;
+    }
     .slide-wrapper {
         height: 40vw;
     }

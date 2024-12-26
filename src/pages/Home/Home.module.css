@@ -282,12 +282,28 @@
         max-width: 100%;
         align-items: center;
     }
+    .section-1 .section-left-content {
+        gap: 6px;
+    }
+    .section-1 .section-left-title {
+        margin-top: 12px;
+    }
     .section .section-left {
         width: 100%;
         align-items: center;
         text-align: center;
         padding-bottom: 10px;
         padding-right: 0;
+        gap: 12px;
+    }
+    .section-1 .section-left-footer .title {
+        padding-bottom: 16px;
+    }
+    .section-desc {
+        margin-bottom: 12px;
+    }
+    .section-title {
+        /* margin-bottom: 12px; */
     }
     .wrap-super-text .super-text {
         display: flex;
@@ -295,10 +311,19 @@
         margin: 0 auto;
         width: 31vw;
     }
+    .margin-bottom-mobile {
+        margin-bottom: 0;
+    }
     .wrap-super-text .super-text .text {
         text-align: start;
     }
+    .wrap-super-text .desc-text {
+        font-size: 1.6vw;
+    }
     .wrap-super-text {
         width: 100%;
+    }
+    .btn-register {
+        padding: 6px 16px;
     }
 }

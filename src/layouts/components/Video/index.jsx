@@ -343,6 +343,7 @@ function Video() {
                                         }}
                                     >
                                         <div className={cx('img-video')}>
+                                            <div className={cx('bg-img', 'background-hv')}></div>
                                             <Image className={cx('img')} src={urlImg + poster} alt={item.name} />
                                             <div
                                                 className={cx('box-watching', {

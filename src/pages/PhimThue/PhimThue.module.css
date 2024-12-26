@@ -56,11 +56,14 @@
 }
 /* END select search */
 @media screen and (max-width: 1024px) {
+    .section {
+        padding-bottom: 0;
+    }
     .slide-wrapper {
         height: 40vw;
     }
     .section .section-title {
-        font-size: 2.6vw;
+        font-size: 3.6vw;
     }
     .slide-wrapper .filter-wrapper {
         display: none;
