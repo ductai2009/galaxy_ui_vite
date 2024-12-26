@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { publicRoutes } from './routes';
 import DefaultLayout from './layouts/DefaultLayout';
 import { Fragment } from 'react';
@@ -13,9 +13,19 @@ function App() {
             customProgressBar: true,
         });
     };
+    function ScrollToTop() {
+        const location = useLocation();
+
+        useEffect(() => {
+            window.scrollTo(0, 0);
+        }, [location]);
+
+        return null;
+    }
     return (
         <Router>
             <div className="App">
+                <ScrollToTop />
                 <ToastContainer />
                 <Routes>
                     {publicRoutes.map((route, index) => {
