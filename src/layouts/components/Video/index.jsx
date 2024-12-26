@@ -48,6 +48,7 @@ import Image from '../../../components/Image';
 import images from '../../../assets/image';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import COM_Alert from '../../../components/COM_Alert';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 function Video() {
     const cx = classNames.bind(style);
@@ -211,7 +212,12 @@ function Video() {
         }
         return result;
     };
-    const rows = chunkArray(source, 5);
+    let rows = chunkArray(source, 5);
+    const isMobile = useMediaQuery('(max-width: 1024px)');
+
+    if (isMobile) {
+        rows = chunkArray(source, 3);
+    }
     const handleBack = () => {
         navigate(-1);
     };

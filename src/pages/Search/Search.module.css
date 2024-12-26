@@ -102,4 +102,7 @@
     .section .section-title {
         font-size: 2.6vw;
     }
+    .grid .item-img {
+        width: calc(100% / 3);
+    }
 }

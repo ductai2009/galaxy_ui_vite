@@ -184,10 +184,10 @@
 /* END wareHouse  */
 @media screen and (max-width: 1024px) {
     .wrapper {
-        height: unset;
+        height: 100%;
     }
     .slide-home {
-        height: unset;
+        height: 100%;
     }
     .pagination.pagination-wareHouse {
         justify-content: center;

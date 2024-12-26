@@ -271,7 +271,7 @@
 }
 @media screen and (max-width: 1024px) {
     .slide {
-        height: 100%;
+        height: 60vw;
     }
     .section {
         display: flex;

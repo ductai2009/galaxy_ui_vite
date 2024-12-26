@@ -146,6 +146,7 @@
     padding: 0 12px;
     border-radius: 4px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+    font-size: 1.1vw;
 }
 .box-gird .img-video .box-watching.active {
     position: absolute;
@@ -297,5 +298,8 @@
 @media screen and (max-width: 1024px) {
     .wrapper__soTap.active .header .name {
         font-size: 2vw;
+    }
+    .wrapper__soTap.active .row .item-img {
+        width: calc(100% / 3 - 10px);
     }
 }

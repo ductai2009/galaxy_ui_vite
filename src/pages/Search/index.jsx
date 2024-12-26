@@ -15,6 +15,7 @@ import { NextIcon, NextSlickIcon, PrevSlickIcon } from '../../components/Icon';
 import Footer from '../../layouts/components/Footer/Footer';
 import { Link, useLocation } from 'react-router-dom';
 import config from '../../components/config';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 function WareHouse() {
     const cx = classNames.bind(style);
@@ -29,7 +30,12 @@ function WareHouse() {
         }
         return result;
     };
-    const rows = chunkArray(data.dsItem, 5);
+    const isMobile = useMediaQuery('(max-width: 1024px)');
+    let rows = chunkArray(data.dsItem, 5);
+    if (isMobile) {
+        rows = chunkArray(data.dsItem, 3);
+    }
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('section')}>
