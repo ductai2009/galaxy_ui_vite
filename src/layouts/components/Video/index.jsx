@@ -481,8 +481,8 @@ function Video() {
                             </div>
                             <div className={cx('group-right')}>
                                 <Tooltip.Root>
-                                    <Tooltip.Trigger asChild onClick={() => handleSoTap()}>
-                                        <div className={cx('hv-cursor', 'so-tap')}>
+                                    <Tooltip.Trigger asChild>
+                                        <div className={cx('hv-cursor', 'so-tap')} onClick={() => handleSoTap()}>
                                             <DuplicateMediaIcon ref={refSoTap} className={cx('icon')} />
                                         </div>
                                     </Tooltip.Trigger>
